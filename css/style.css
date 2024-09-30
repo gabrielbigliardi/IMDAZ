@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: antiquewhite;
+}
+body header {
+  background-color: crimson;
+  position: sticky;
+  top: 0;
+}
+body header nav ul {
+  background-color: #a41623;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+}
+body header nav ul li {
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+body header nav ul li a {
+  font-style: none;
+  text-decoration: none;
+  color: white;
+}
+body header nav ul li a :link {
+  color: chartreuse;
+}
+body header nav ul li a :visited {
+  color: green;
+}
+body header nav ul li a :hover {
+  color: orange;
+}
+body header nav ul li a :active {
+  color: blue;
+}
+body #escolas {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+body #escolas div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  max-width: 30vw;
+  box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+}
+body #escolas div img {
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
+  text-align: center;
+}
+body #escolas div p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+  /* let the text wrap preserving spaces */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,144 @@
+$primary-color: #a41623;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+
+    box-sizing: border-box;
+    background-color: antiquewhite;
+
+    section:nth-child(3) {
+        // background-color: #f7b267;
+    }
+
+    section:nth-child(4) {
+        // background-color: #f79d65;
+    }
+
+    section:nth-child(5) {
+        // background-color: #f4845f;
+    }
+
+    section:nth-child(6) {
+        // background-color: #f27059;
+    }
+
+    section:nth-child(7) {
+        // background-color: #f25c54;
+    }
+
+
+    header {
+
+        background-color: crimson;
+        position: sticky;
+        top: 0;
+
+        nav {
+
+            ul {
+                background-color: $primary-color;
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+
+                text-align: center;
+                font-size: 1.3rem;
+
+                li {
+                    list-style: none;
+                    color: white;
+                    font-family: sans-serif;
+                    cursor: pointer;
+
+                    a {
+                        font-style: none;
+                        text-decoration: none;
+                        color: white;
+
+                        :link {
+                            color: chartreuse;
+                        }
+
+                        :visited {
+                            color: green;
+                        }
+
+                        :hover {
+                            color: orange;
+                        }
+
+                        :active {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #escolas {
+        position: relative;
+        width: 100%;
+        margin-inline: auto;
+
+
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: white;
+            border-radius: .5rem;
+
+            padding: 1rem .8rem;
+            text-align: center;
+
+            max-width: 30vw;
+
+            box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+            -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+            -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+
+            img {
+                max-width: 80%;
+                max-height: 100%;
+                object-fit: contain;
+                text-align: center;
+            }
+
+            p {
+                // height: 7vh;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                white-space: pre-wrap;
+                /* let the text wrap preserving spaces */
+
+            }
+        }
+
+        #eeidaz-container {}
+
+        #eefdaz-container {}
+    }
+
+    section {
+        // height: 75vh;
+
+    }
+}
