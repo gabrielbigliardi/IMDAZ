@@ -7,9 +7,22 @@
 
 body {
   background-color: antiquewhite;
-  width: 100vw;
+  width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 75vh;
+}
+
+header {
+  background-color: #a41623;
+  position: sticky;
+  top: 0;
+}
 header nav {
   height: 100%;
   width: 0;
