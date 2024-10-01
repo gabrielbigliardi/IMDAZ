@@ -1,87 +1,53 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
   background-color: antiquewhite;
+  width: 100vw;
 }
-body header {
-  background-color: crimson;
-  position: sticky;
+
+header nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
 }
-body header nav ul {
-  background-color: #a41623;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.3rem;
-}
-body header nav ul li {
-  list-style: none;
-  color: white;
-  font-family: sans-serif;
-  cursor: pointer;
-}
-body header nav ul li a {
-  font-style: none;
+header nav .closebtn {
   text-decoration: none;
-  color: white;
+  position: absolute;
+  color: #818181;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
-body header nav ul li a :link {
-  color: chartreuse;
-}
-body header nav ul li a :visited {
-  color: green;
-}
-body header nav ul li a :hover {
-  color: orange;
-}
-body header nav ul li a :active {
-  color: blue;
-}
-body #escolas {
+header nav div {
   position: relative;
+  top: 25%;
   width: 100%;
-  margin-inline: auto;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-}
-body #escolas div {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 1rem 0.8rem;
   text-align: center;
-  max-width: 30vw;
-  box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
-  -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+  margin-top: 30px;
 }
-body #escolas div img {
-  max-width: 80%;
-  max-height: 100%;
-  object-fit: contain;
-  text-align: center;
+header nav div a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-body #escolas div p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  white-space: pre-wrap;
-  /* let the text wrap preserving spaces */
+header nav div a:hover,
+header nav div a:focus {
+  color: #f1f1f1;
 }
 
 /*# sourceMappingURL=style.css.map */

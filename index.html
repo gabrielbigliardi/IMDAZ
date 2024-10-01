@@ -12,30 +12,22 @@
 <body>
     <header>
 
-        <h1>imdaz</h1>
+        <!-- <h1>imdaz</h1> -->
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
 
-        <nav>
-            <ul>
-                <li onclick="clicando(event)">
-                    <a href="#inicio">Início</a>
-                </li>
-                <li>
-                    <a href="#sobrenos">Sobre nós</a>
-                </li>
-                <li>
-                    <a href="#projetos">Projetos</a>
-                </li>
-                <li>
-                    <a href="#escolas">Escolas</a>
-                </li>
-                <li>
-                    <a href="#equipe">Equipe</a>
-                </li>
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
+        <nav id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#inicio">Início</a>
+                <a href="#sobrenos">Sobre nós</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#escolas">Escolas</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#contato">Contato</a>
+            </div>
         </nav>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
     </header>
 
