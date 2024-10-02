@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Aline Ribeiro",
+        "cargo": "Professora",
+        "urlFoto": "/assets/equipe/00.webp"
+    },
+    {
+        "nome": "Amanda Luiza",
+        "cargo": "Professora de Música",
+        "urlFoto": "/assets/equipe/01.webp"
+    },
+    {
+        "nome": "Ana Caren",
+        "cargo": "Professora de Artes",
+        "urlFoto": "/assets/equipe/02.webp"
+    },
+    {
+        "nome": "Ana Emília Palmeira",
+        "cargo": "Assistente Social",
+        "urlFoto": "/assets/equipe/03.webp"
+    },
+    {
+        "nome": "Anelise",
+        "cargo": "Auxiliar de Sala",
+        "urlFoto": "/assets/equipe/04.webp"
+    },
+    {
+        "nome": "Beatriz Vasconcellos",
+        "cargo": "Professora",
+        "urlFoto": "/assets/equipe/05.webp"
+    }
+]
