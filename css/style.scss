@@ -292,6 +292,11 @@ section {
             color: #ffffff;
         }
 
+        p {
+            margin-top: .5rem;
+            color: white;
+        }
+
         button {
             display: block;
             margin: 0 auto;
@@ -341,6 +346,7 @@ section {
                 p {
                     font-size: .8rem;
                     opacity: .7;
+                    color: black;
                 }
             }
         }

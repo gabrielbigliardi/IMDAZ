@@ -222,6 +222,10 @@ section {
 #equipe .container h2 {
   color: #ffffff;
 }
+#equipe .container p {
+  margin-top: 0.5rem;
+  color: white;
+}
 #equipe .container button {
   display: block;
   margin: 0 auto;
@@ -259,6 +263,7 @@ section {
 #equipe .colaboradores .card .info p {
   font-size: 0.8rem;
   opacity: 0.7;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

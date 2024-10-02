@@ -40,6 +40,9 @@ fetch('./data/equipe.json')
         const h2Colaboradores = document.createElement('h2');
         h2Colaboradores.innerText = 'Colaboradores';
 
+        const pNossaEquipe = document.createElement('p');
+        pNossaEquipe.innerText = 'Conheça nossa equipe'
+
         const divContainer = document.createElement('div');
         divContainer.setAttribute('class', 'container');
 
@@ -50,7 +53,7 @@ fetch('./data/equipe.json')
         buttonMaisColaboradores.innerText = "Ver todos"
 
 
-        equipeDiv.appendChild(divContainer).appendChild(h2Colaboradores).insertAdjacentElement('afterend', divColaboradores).insertAdjacentElement('afterend', buttonMaisColaboradores)
+        equipeDiv.appendChild(divContainer).appendChild(h2Colaboradores).insertAdjacentElement('afterend', pNossaEquipe).insertAdjacentElement('afterend', divColaboradores).insertAdjacentElement('afterend', buttonMaisColaboradores)
 
         for (let i = 0; i < 3; i++) {
 
