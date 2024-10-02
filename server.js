@@ -9,6 +9,10 @@ const app = express();
 // dentro da pasta atual onde encontra esse arquivo ('.'), sirva os arquivos estaticos, provendo os arquivos atraves desse middleware
 app.use(express.static('.'));
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/templates/index.html');
+})
+
 // se vier um formato a partir de uma submit de um formulario, esse codigo vai ler os dados e transforma-los em objeto
 // app.use(bodyParser.urlencoded({ extended: true }))
 
