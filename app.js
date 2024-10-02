@@ -35,18 +35,24 @@ fetch('./data/equipe.json')
     .then(res => res.json())
     .then(data => {
 
+        const equipeDiv = document.querySelector('section#equipe');
+
+        const h2Colaboradores = document.createElement('h2');
+        h2Colaboradores.innerText = 'Colaboradores';
+
+        const divContainer = document.createElement('div');
+        divContainer.setAttribute('class', 'container');
+
+        const divColaboradores = document.createElement('div');
+        divColaboradores.setAttribute('class', 'container colaboradores');
+
+        const buttonMaisColaboradores = document.createElement('button');
+        buttonMaisColaboradores.innerText = "Ver todos"
+
+
+        equipeDiv.appendChild(divContainer).appendChild(h2Colaboradores).insertAdjacentElement('afterend', divColaboradores).insertAdjacentElement('afterend', buttonMaisColaboradores)
 
         for (let i = 0; i < 3; i++) {
-
-            // data.forEach((person) => {
-
-            const equipeDiv = document.querySelector('section#equipe');
-
-            const divRow = document.createElement('div');
-            divRow.setAttribute('class', 'row');
-
-            const divColumn = document.createElement('div');
-            divColumn.setAttribute('class', 'column');
 
             const divCard = document.createElement('div');
             divCard.setAttribute('class', 'card');
@@ -54,21 +60,20 @@ fetch('./data/equipe.json')
             const img = document.createElement('img')
             img.setAttribute('src', `${data[i].urlFoto}`);
 
-            const divContainer = document.createElement('div');
-            divContainer.setAttribute('class', 'container');
+            const divInfo = document.createElement('div');
+            divInfo.setAttribute('class', 'info');
 
-            const h2Nome = document.createElement('h2');
-            h2Nome.innerText = `${data[i].nome}`;
+            const h3Nome = document.createElement('h3');
+            h3Nome.innerText = `${data[i].nome}`;
 
             const pCargo = document.createElement('p');
             pCargo.innerHTML = `${data[i].cargo}`;
 
 
-            divContainer.appendChild(h2Nome).insertAdjacentElement('afterend', pCargo)
+            divColaboradores.appendChild(divCard).appendChild(img).insertAdjacentElement('afterend', divInfo).appendChild(h3Nome).insertAdjacentElement('afterend', pCargo)
             // const h1 = document.createElement('h1')
             // h1.innerText = `${data[0].nome}`
 
-            equipeDiv.appendChild(divRow).appendChild(divColumn).appendChild(divCard).appendChild(img).insertAdjacentElement('afterend', divContainer)
         }
         // })
 

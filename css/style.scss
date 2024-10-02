@@ -8,7 +8,7 @@ $primary-color: #a41623;
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: rgb(230, 230, 230);
     width: 100%;
 }
 
@@ -21,7 +21,7 @@ html {
 
 
 header {
-    background-color: #a41623;
+    background-color: $primary-color;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -279,6 +279,73 @@ section {
     }
 }
 
+
+
+#equipe {
+    .container {
+        background-color: $primary-color;
+        padding: 2rem;
+        text-align: center;
+
+
+        h2 {
+            color: #ffffff;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+
+            padding: 1rem;
+            background-color: white;
+            border: none;
+            border-radius: 99rem;
+
+        }
+    }
+
+    .colaboradores {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+
+        width: 100%;
+
+        padding: 2rem;
+
+
+
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            max-width: 10rem;
+
+            img {
+                width: 100%;
+            }
+
+            .info {
+                padding: 1rem;
+
+                h3 {
+                    font-size: 1rem;
+                    margin-bottom: .2rem;
+                }
+
+                p {
+                    font-size: .8rem;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
 
 
 
