@@ -1,5 +1,42 @@
+/* ------------------------------------------------------- */
+/* --------------------- MENU SCROLL --------------------- */
+/* ------------------------------------------------------- */
+const li = document.getElementsByTagName('li')
+
+function clicando(e) {
+    console.log(e.target);
+}
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+
+function scrollNClose(e) {
+
+    e.preventDefault();
+
+    const targetId = e.target.getAttribute('id');
+
+    const targetElement = document.querySelector(`section#${targetId}`);
+
+    closeNav();
+
+    window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth"
+    })
+}
 
 
+
+
+/* -------------------------------------------------- */
+/* --------------------- SLIDER --------------------- */
+/* -------------------------------------------------- */
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,9 +65,23 @@ function showSlides(n) {
 }
 
 
+/* ------------------------------------------------------------ */
+/* --------------------- REDIRECT ESCOLAS --------------------- */
+/* ------------------------------------------------------------ */
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function () {
+        const targetPage = this.getAttribute('data-target');
+        window.location.href = targetPage; // Agora vai para as rotas sem .html
+    });
+});
 
 
 
+
+
+/* ---------------------------------------------------------------- */
+/* --------------------- MONTAR COLABORADORES --------------------- */
+/* ---------------------------------------------------------------- */
 fetch('./data/equipe.json')
     .then(res => res.json())
     .then(data => {
@@ -74,44 +125,10 @@ fetch('./data/equipe.json')
 
 
             divColaboradores.appendChild(divCard).appendChild(img).insertAdjacentElement('afterend', divInfo).appendChild(h3Nome).insertAdjacentElement('afterend', pCargo)
-            // const h1 = document.createElement('h1')
-            // h1.innerText = `${data[0].nome}`
 
         }
-        // })
 
     })
-    .catch(error => console.log("error:", error)
+    .catch(error => console.log("error nos colaboradores:", error)
     )
-
-
-//  <div class="row">
-//          <div class="column">
-//                 <div class="card">
-//                     <img src="/assets/equipe/00.webp" alt="Jane" style="width:100%">
-//                     <div class="container">
-//                         <h2>Jane Doe</h2>
-//                         <p class="title">CEO & Founder</p>
-//                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-
-
-//                     </div>
-//                 </div>
-//             </div>
-
-
-// console.log(equipeData)
-
-
-// const divRow = document.createElement('div')
-// divRow.classList.add('row')
-// divRow.innerHTML('DIVROW TEST')
-
-
-// equipe.appendChild(divRow)
-// document.addEventListener('DOMContentLoaded', () => {
-//     fetch('./data/equipe.json')
-//         .then(res => res.json)
-//         .then(data => console.log(data))
-// })
 
