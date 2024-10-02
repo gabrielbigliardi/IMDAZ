@@ -1,13 +1,7 @@
-
 const li = document.getElementsByTagName('li')
 
 function clicando(e) {
-    // e.preventDefault()
     console.log(e.target);
-
-    // setTimeout(() => {
-
-    // })
 }
 
 function openNav() {
@@ -16,7 +10,6 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-    console.log(document.querySelectorAll('.navLink'))
 }
 
 function scrollNClose(e) {
@@ -27,15 +20,16 @@ function scrollNClose(e) {
 
     const targetElement = document.querySelector(`section#${targetId}`);
 
-    closeNav()
+    closeNav();
 
     window.scrollTo({
         top: targetElement.offsetTop,
         behavior: "smooth"
     })
-
-
 }
+
+
+
 
 
 

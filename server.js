@@ -1,12 +1,12 @@
-const bodyParser = require('body-parser')
-const express = require('express')
+const bodyParser = require('body-parser');
+const express = require('express');
 
 // instanciar express
 const app = express();
 
 // middlewares -> funcao executada qndo determinada requisicao chegar
 // dentro da pasta atual onde encontra esse arquivo ('.'), sirva os arquivos estaticos, provendo os arquivos atraves desse middleware
-app.use(express.static('.'))
+app.use(express.static('.'));
 
 // se vier um formato a partir de uma submit de um formulario, esse codigo vai ler os dados e transforma-los em objeto
 // app.use(bodyParser.urlencoded({ extended: true }))
@@ -20,9 +20,20 @@ app.use(express.static('.'))
 app.get('/teste', (req, res) => {
     console.log(req);
 
-    res.send('Ok')
+    res.send('Ok');
+})
+
+app.get('/eeidaz', (req, res) => {
+
+    res.sendFile(__dirname + '/eeidaz.html');
+})
+
+app.get('/eefdaz', (req, res) => {
+
+    res.sendFile(__dirname + '/eefdaz.html');
 })
 
 
 
-app.listen(8080, () => console.log('Executando...'))
+
+app.listen(8080, () => console.log('Executando...'));

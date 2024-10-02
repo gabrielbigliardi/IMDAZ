@@ -7,6 +7,7 @@
     <title>IMDAZ</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="script.js"></script>
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -18,12 +19,7 @@
         <nav id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <!-- <a class="navLink" href="#inicio">Início</a>
-                <a class="navLink" href="#sobrenos">Sobre nós</a>
-                <a class="navLink" href="#projetos">Projetos</a>
-                <a class="navLink" href="#escolas">Escolas</a>
-                <a class="navLink" href="#equipe">Equipe</a>
-                <a class="navLink" href="#contato">Contato</a> -->
+
                 <a id="inicio" class="navLink" onclick="scrollNClose(event)">Início</a>
                 <a id="sobrenos" class="navLink" onclick="scrollNClose(event)">Sobre nós</a>
                 <a id="projetos" class="navLink" onclick="scrollNClose(event)">Projetos</a>
@@ -33,7 +29,7 @@
             </div>
         </nav>
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
     </header>
 
@@ -50,7 +46,7 @@
     </section>
 
     <section id="escolas">
-        <div id="eeidaz-container">
+        <div class="card" id="eeidaz-container" data-target="/eeidaz">
             <img src="./assets/EEIDAZ.webp" alt="Escola de Educação Infantil Dom Antônio Zattera">
             <h3>Escola de Educação Infantil Dom Antônio Zattera</h3>
             <p>Criada em 2023 a Escola de Educação Infantil busca entregar aos alunos uma educação de qualidade, onde
@@ -58,7 +54,7 @@
                 nossas crianças confiem no seu próprio potencial e se formem jovens com pensamento crítico, consciência
                 social e a certeza que o amor ao próximo pode transformar o mundo! </p>
         </div>
-        <div id="eefdaz-container">
+        <div class="card" id="eefdaz-container" data-target="/eefdaz">
             <img src="./assets/EEFDAZ.webp" alt="Escola de Educação Fundamental Dom Antônio Zattera">
             <h3>Escola de Educação Fundamental Dom Antônio Zattera</h3>
             <p>Após a criação da Escola de Educação Infantil em 2023, não tinha sentido abandonarmos todo o nosso
