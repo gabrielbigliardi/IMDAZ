@@ -23,7 +23,9 @@ function scrollNClose(e) {
 
     const targetElement = document.querySelector(`section#${targetId}`);
 
-    closeNav();
+    if (window.screenX < 768) {
+        closeNav();
+    }
 
     window.scrollTo({
         top: targetElement.offsetTop,
