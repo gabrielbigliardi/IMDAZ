@@ -132,3 +132,41 @@ fetch('./data/equipe.json')
     .catch(error => console.log("error nos colaboradores:", error)
     )
 
+
+
+
+
+/* ------------------------------------------------------ */
+/* --------------------- FORMULARIO --------------------- */
+/* ------------------------------------------------------ */
+document.getElementById('formulario').addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // console.log(nome, email, mensagem)
+
+    const emailData = {
+        nome, email, mensagem
+    }
+
+    fetch('/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData)
+    }).then(res => {
+        if (res.ok) {
+            console.log('email enviado com sucesso')
+        } else {
+            console.log('erro ao enviar o email')
+        }
+    }).catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar o email.');
+    });
+
+})

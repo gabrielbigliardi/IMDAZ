@@ -9,10 +9,6 @@ const app = express();
 // dentro da pasta atual onde encontra esse arquivo ('.'), sirva os arquivos estaticos, provendo os arquivos atraves desse middleware
 app.use(express.static('.'));
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/templates/index.html');
-})
-
 // se vier um formato a partir de uma submit de um formulario, esse codigo vai ler os dados e transforma-los em objeto
 // app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -21,6 +17,11 @@ app.use(bodyParser.json())
 
 
 
+
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/templates/index.html');
+})
 // qndo vier req do tipo GET nessa url '/teste'
 app.get('/teste', (req, res) => {
     console.log(req);
@@ -38,9 +39,9 @@ app.get('/eefdaz', (req, res) => {
     res.sendFile(__dirname + '/templates/eefdaz.html');
 })
 
+app.post('/send', (req, res) => {
+    const { nome, email, mensagem } = req.body;
 
-app.get('/send', (req, res) => {
-    console.log(req);
 
 
     const transporter = nodemailer.createTransport({
@@ -52,14 +53,27 @@ app.get('/send', (req, res) => {
         }
     })
 
+
     transporter.sendMail({
-        from: "uca <uca.cu.ruivo@email.com>",
+        from: `${nome} <${email}>`,
         to: "gabriel.bigliardi@sou.ucpel.edu.br",
         replyTo: "gabriel.bigliardi@sou.ucpel.edu.br",
-        subject: 'HELLO WORLD',
-        text: 'testando email'
+        subject: `Mensagem recebida do site IMDAZ`,
+        text: `${mensagem}`
     })
+
+    res.status(200).send('Enviado com sucesso');
 })
+
+
+
+
+// app.get('/send', (req, res) => {
+//     console.log(req);
+
+
+
+
 
 
 
