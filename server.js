@@ -67,14 +67,4 @@ app.post('/send', (req, res) => {
 
 
 
-
-// app.get('/send', (req, res) => {
-//     console.log(req);
-
-
-
-
-
-
-
 app.listen(8080, () => console.log('Executando...'));
