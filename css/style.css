@@ -267,4 +267,40 @@ section {
   color: black;
 }
 
+#contato {
+  background-color: #bbb;
+}
+#contato .container #formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  color: #a41623;
+}
+#contato .container #formulario :nth-child(even) {
+  margin-bottom: 2rem;
+}
+#contato .container #formulario :nth-child(odd) {
+  margin-bottom: 0.3rem;
+}
+#contato .container #formulario label {
+  font-size: 2rem;
+}
+#contato .container #formulario input,
+#contato .container #formulario textarea {
+  height: 3rem;
+  border: #a41623 2px solid;
+  border-radius: 0.5rem;
+}
+#contato .container #formulario textarea {
+  height: 12rem;
+  resize: none;
+}
+#contato .container #formulario button {
+  height: 3rem;
+  color: white;
+  background-color: #a41623;
+  border: #a41623 1px solid;
+  border-radius: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
