@@ -54,6 +54,7 @@ header nav div a {
   color: #818181;
   display: block;
   transition: 0.3s;
+  cursor: pointer;
 }
 header nav div a:hover,
 header nav div a:focus {
@@ -267,35 +268,35 @@ section {
   color: black;
 }
 
-#contato {
+section#contato {
   background-color: #bbb;
 }
-#contato .container #formulario {
+section#contato .container #formulario {
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
   color: #a41623;
 }
-#contato .container #formulario :nth-child(even) {
+section#contato .container #formulario :nth-child(even) {
   margin-bottom: 2rem;
 }
-#contato .container #formulario :nth-child(odd) {
+section#contato .container #formulario :nth-child(odd) {
   margin-bottom: 0.3rem;
 }
-#contato .container #formulario label {
+section#contato .container #formulario label {
   font-size: 2rem;
 }
-#contato .container #formulario input,
-#contato .container #formulario textarea {
+section#contato .container #formulario input,
+section#contato .container #formulario textarea {
   height: 3rem;
   border: #a41623 2px solid;
   border-radius: 0.5rem;
 }
-#contato .container #formulario textarea {
+section#contato .container #formulario textarea {
   height: 12rem;
   resize: none;
 }
-#contato .container #formulario button {
+section#contato .container #formulario button {
   height: 3rem;
   color: white;
   background-color: #a41623;
