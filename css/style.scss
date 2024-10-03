@@ -326,6 +326,11 @@ section {
 
 
 
+
+
+/* --------------------------------------------------- */
+/* --------------------- ESCOLAS --------------------- */
+/* --------------------------------------------------- */
 #escolas {
     position: relative;
     width: 100%;
@@ -378,6 +383,13 @@ section {
             /* let the text wrap preserving spaces */
 
         }
+    }
+}
+
+// arrumar responsividade das escolas
+@media only screen and (min-width: 1080px) {
+    #escolas {
+        flex-direction: row;
     }
 }
 

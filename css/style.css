@@ -237,6 +237,9 @@ section {
   margin-bottom: 4rem;
 }
 
+/* --------------------------------------------------- */
+/* --------------------- ESCOLAS --------------------- */
+/* --------------------------------------------------- */
 #escolas {
   position: relative;
   width: 100%;
@@ -279,6 +282,11 @@ section {
   /* let the text wrap preserving spaces */
 }
 
+@media only screen and (min-width: 1080px) {
+  #escolas {
+    flex-direction: row;
+  }
+}
 #equipe .container {
   background-color: #a41623;
   padding: 2rem;
