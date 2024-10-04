@@ -7,31 +7,43 @@ function clicando(e) {
     console.log(e.target);
 }
 
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
 
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
+// const sanduiche = document.getElementById('sanduiche');
+// const menu = document.getElementById('menu');
 
-function scrollNClose(e) {
+// sanduiche.addEventListener('click', () => {
+//     console.log('sanduiche')
+//     // menu.classList.toggle('active');
+// });
 
-    e.preventDefault();
 
-    const targetId = e.target.getAttribute('id');
+// function openNav() {
+//     // document.getElementById("myNav").style.width = "100%";
+//     document.querySelector('.overlay-content').classList.add('menu-active');
+//     // console.log(document.querySelectorAll('.overlay-content'));
+// }
 
-    const targetElement = document.querySelector(`section#${targetId}`);
+// function closeNav() {
+//     document.getElementById("myNav").style.width = "0%";
+// }
 
-    if (window.screenX < 768) {
-        closeNav();
-    }
+// function scrollNClose(e) {
 
-    window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth"
-    })
-}
+//     e.preventDefault();
+
+//     const targetId = e.target.getAttribute('id');
+
+//     const targetElement = document.querySelector(`section#${targetId}`);
+
+//     // if (window.screenX < 768) {
+//     //     closeNav();
+//     // }
+
+//     window.scrollTo({
+//         top: targetElement.offsetTop,
+//         behavior: "smooth"
+//     })
+// }
 
 
 

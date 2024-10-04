@@ -17,87 +17,78 @@ html {
 /* ----------------------------------------------- */
 /* --------------------- NAV --------------------- */
 /* ----------------------------------------------- */
-header {
-  background-color: #a41623;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-header nav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-header nav .closebtn {
-  text-decoration: none;
-  position: absolute;
-  color: #818181;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-header nav div {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-header nav div a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  cursor: pointer;
-}
-header nav div a:hover,
-header nav div a:focus {
-  color: #f1f1f1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media only screen and (min-width: 768px) {
-  header nav {
-    position: static;
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+nav .menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+nav .menu {
+  width: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+nav .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  nav .menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: #a41623;
-  }
-  header nav div {
     position: static;
-    display: flex;
-    margin: 0;
-    top: 0;
-    width: auto;
-    height: 100%;
+    justify-content: flex-end;
+    max-height: none;
   }
-  header nav div a {
-    padding: 15px 20px;
-    font-size: 18px;
-    display: inline-block;
-    color: white;
+  nav .menu a {
+    padding: 0 10px 20px;
+    border: none;
   }
-  header .closebtn {
-    display: none;
-  }
-  header span {
-    display: none;
-  }
-  header .closebtn {
+  nav .menu-toggle {
     display: none;
   }
 }
+.menu.active {
+  max-height: 200px;
+}
+
 /* -------------------------------------------------- */
 /* --------------------- INICIO --------------------- */
 /* -------------------------------------------------- */
@@ -240,7 +231,7 @@ section {
 /* --------------------------------------------------- */
 /* --------------------- ESCOLAS --------------------- */
 /* --------------------------------------------------- */
-#escolas {
+section#escolas {
   position: relative;
   width: 100%;
   display: flex;
@@ -249,7 +240,7 @@ section {
   align-items: center;
   gap: 2rem;
 }
-#escolas div {
+section#escolas div {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -259,19 +250,20 @@ section {
   border-radius: 0.5rem;
   padding: 1rem 0.8rem;
   text-align: center;
-  max-width: 50vw;
+  max-width: 60vw;
+  min-height: 40vh;
   cursor: pointer;
   box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
 }
-#escolas div img {
+section#escolas div img {
   max-width: 80%;
   max-height: 100%;
   object-fit: contain;
   text-align: center;
 }
-#escolas div p {
+section#escolas div p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -283,10 +275,14 @@ section {
 }
 
 @media only screen and (min-width: 1080px) {
-  #escolas {
+  section#escolas {
     flex-direction: row;
+    padding-inline: 10rem;
   }
 }
+/* -------------------------------------------------- */
+/* --------------------- EQUIPE --------------------- */
+/* -------------------------------------------------- */
 #equipe .container {
   background-color: #a41623;
   padding: 2rem;
@@ -339,9 +335,9 @@ section {
   color: black;
 }
 
-section#contato {
-  background-color: #bbb;
-}
+/* --------------------------------------------------- */
+/* --------------------- CONTATO --------------------- */
+/* --------------------------------------------------- */
 section#contato .container #formulario {
   display: flex;
   flex-direction: column;
