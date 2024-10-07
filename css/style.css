@@ -1,17 +1,487 @@
-/* Error: expected "{".
- *     ,
- * 639 | >>>>>>> 6d34aab039ad91be2cbd44f742d4bc40639c29df
- *     |                                                 ^
- *     '
- *   css\style.scss 639:49  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 639 \2502  >>>>>>> 6d34aab039ad91be2cbd44f742d4bc40639c29df\d\a     \2502                                                  ^\a     \2575 \a   css\\style.scss 639:49  root stylesheet';
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------------------- */
+/* --------------------- NAV --------------------- */
+/* ----------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #a41623;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+nav .menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+nav .menu {
+  width: 100%;
+  background-color: #a41623;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+nav .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #a41623;
+}
+
+@media (min-width: 768px) {
+  nav .menu {
+    display: flex;
+    position: static;
+    justify-content: center;
+    max-height: none;
+  }
+  nav .menu a {
+    padding: 0 1rem;
+    border: none;
+  }
+  nav .menu-toggle {
+    display: none;
+  }
+}
+.menu.active {
+  max-height: 200px;
+}
+
+/* -------------------------------------------------- */
+/* --------------------- INICIO --------------------- */
+/* -------------------------------------------------- */
+section#inicio {
+  text-align: center;
+  padding: 8rem 5rem;
+  background-image: linear-gradient(rgba(230, 230, 230, 0.5), rgba(230, 230, 230, 0.5)), url("/assets/IMDAZ.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+section#inicio h1 {
+  padding-bottom: 0.7rem;
+}
+section#inicio p {
+  opacity: 0.8;
+}
+
+/* -------------------------------------------------- */
+/* --------------------- SLIDES --------------------- */
+/* -------------------------------------------------- */
+section#projetos {
+  background-color: rgb(11, 19, 19);
+  padding: 2rem;
+}
+
+.mySlides {
+  display: none;
+  opacity: 0.8;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* image */
+.mySlides:hover .image {
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/* On smaller screens, decrease text size */
+@media only screen and (min-width: 865px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 3rem;
+  }
+  .slideshow-container {
+    max-width: 70%;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 4rem;
+  }
+}
+section {
+  margin-bottom: 4rem;
+}
+
+/* --------------------------------------------------- */
+/* --------------------- ESCOLAS --------------------- */
+/* --------------------------------------------------- */
+section#escolas {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+section#escolas div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  max-width: 60vw;
+  min-height: 190px;
+  cursor: pointer;
+  box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
+}
+section#escolas div img {
+  text-align: center;
+  max-width: 200px;
+  max-height: 100%;
+  object-fit: contain;
+}
+section#escolas div h3 {
+  margin-top: 1rem;
+  min-height: 50px;
+  overflow: hidden;
+  /* Esconde o excesso de texto, se necessário */
+  text-overflow: ellipsis;
+  /* Se desejar, corte o texto com "..." */
+}
+section#escolas div p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+  /* let the text wrap preserving spaces */
+}
+
+@media only screen and (min-width: 1080px) {
+  section#escolas {
+    flex-direction: row;
+    padding-inline: 10rem;
+  }
+}
+/* -------------------------------------------------- */
+/* --------------------- EQUIPE --------------------- */
+/* -------------------------------------------------- */
+#equipe .container {
+  background-color: #a41623;
+  padding: 2rem;
+  text-align: center;
+}
+#equipe .container h2 {
+  color: #ffffff;
+}
+#equipe .container p {
+  margin-top: 0.5rem;
+  color: white;
+}
+#equipe .container button {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 99rem;
+}
+#equipe .colaboradores {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+#equipe .colaboradores .card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 10rem;
+}
+#equipe .colaboradores .card img {
+  width: 100%;
+}
+#equipe .colaboradores .card .info {
+  padding: 1rem;
+}
+#equipe .colaboradores .card .info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+#equipe .colaboradores .card .info p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: black;
+}
+
+/* --------------------------------------------------- */
+/* --------------------- CONTATO --------------------- */
+/* --------------------------------------------------- */
+section#contato .container #formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  color: #a41623;
+}
+section#contato .container #formulario :nth-child(even) {
+  margin-bottom: 2rem;
+}
+section#contato .container #formulario :nth-child(odd) {
+  margin-bottom: 0.3rem;
+}
+section#contato .container #formulario label {
+  font-size: 2rem;
+}
+section#contato .container #formulario input,
+section#contato .container #formulario textarea {
+  font-size: 1.2rem;
+  height: 3rem;
+  border: #a41623 2px solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+section#contato .container #formulario textarea {
+  height: 12rem;
+  resize: none;
+}
+section#contato .container #formulario button {
+  height: 3rem;
+  color: white;
+  background-color: #a41623;
+  border: #a41623 1px solid;
+  border-radius: 0.5rem;
+}
+
+#section-eeidaz {
+  text-align: center;
+}
+#section-eeidaz div:nth-child(1) {
+  padding: 4rem;
+  background-color: white;
+}
+#section-eeidaz h1 {
+  padding-bottom: 2rem;
+}
+#section-eeidaz p {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+#section-eeidaz article {
+  padding: 5vh 8vw;
+  display: flex;
+}
+#section-eeidaz article div:nth-child(1) {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(230, 230, 230);
+}
+#section-eeidaz img {
+  width: 30vw;
+  object-fit: cover;
+  height: 100%;
+}
+#section-eeidaz article:nth-child(2) {
+  background-color: rgba(164, 22, 35, 0.9);
+}
+#section-eeidaz article:nth-child(3) {
+  background-color: rgba(164, 22, 35, 0.8);
+}
+#section-eeidaz article:nth-child(4) {
+  background-color: rgba(164, 22, 35, 0.7);
+}
+#section-eeidaz article:nth-child(5) {
+  background-color: rgba(164, 22, 35, 0.6);
+}
+#section-eeidaz article:nth-child(6) {
+  background-color: rgba(164, 22, 35, 0.5);
+}
+#section-eeidaz article:nth-child(7) {
+  background-color: rgba(164, 22, 35, 0.4);
+}
+
+#section-eefdaz {
+  text-align: center;
+}
+#section-eefdaz div:nth-child(1) {
+  padding: 4rem;
+  background-color: white;
+}
+#section-eefdaz h1 {
+  padding-bottom: 2rem;
+}
+#section-eefdaz p {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+#section-eefdaz article {
+  padding: 5vh 8vw;
+  display: flex;
+}
+#section-eefdaz article div:nth-child(1) {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(230, 230, 230);
+}
+#section-eefdaz img {
+  width: 30vw;
+  object-fit: cover;
+  height: 100%;
+}
+#section-eefdaz article:nth-child(2) {
+  background-color: rgba(178, 224, 187, 0.99);
+}
+#section-eefdaz article:nth-child(3) {
+  background-color: rgba(178, 224, 187, 0.66);
+}
+#section-eefdaz article:nth-child(4) {
+  background-color: rgba(178, 224, 187, 0.33);
+}
+#section-eefdaz article:nth-child(5) {
+  background-color: rgba(178, 224, 187, 0.2);
+}
+footer {
+  background-color: #a41623;
+}
+
+/*# sourceMappingURL=style.css.map */
