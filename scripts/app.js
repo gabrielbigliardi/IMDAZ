@@ -142,6 +142,10 @@ fetch('./data/equipe.json')
 
         }
 
+        buttonMaisColaboradores.addEventListener('click', () => {
+            window.location.href = "/colaboradores"
+        })
+
     })
     .catch(error => console.log("error nos colaboradores:", error)
     )

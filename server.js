@@ -39,6 +39,11 @@ app.get('/eefdaz', (req, res) => {
     res.sendFile(__dirname + '/templates/eefdaz.html');
 })
 
+app.get('/colaboradores', (req, res) => {
+    res.sendFile(__dirname + '/templates/colaboradores.html');
+
+})
+
 app.post('/send', (req, res) => {
     const { nome, email, mensagem } = req.body;
 
@@ -52,6 +57,7 @@ app.post('/send', (req, res) => {
             pass: "c8580af1c2f42e",
         }
     })
+
 
 
     transporter.sendMail({
