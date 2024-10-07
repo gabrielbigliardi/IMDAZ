@@ -1,6 +1,7 @@
 $primary-color: #a41623;
 $eefaz-article-color: #b2e0bb;
-$background-color: rgb(230, 230, 230);
+//$background-color: rgb(230, 230, 230);
+$background-color: blue;
 
 * {
     margin: 0;
@@ -409,6 +410,7 @@ section#escolas {
 /* -------------------------------------------------- */
 /* --------------------- EQUIPE --------------------- */
 /* -------------------------------------------------- */
+
 #equipe {
     .container {
         background-color: $primary-color;
@@ -632,6 +634,7 @@ section#contato {
         // padding-inline: 0;
         // width: 100%;
 
+        <<<<<<< HEAD=======>>>>>>>6d34aab039ad91be2cbd44f742d4bc40639c29df
     }
 
 }
@@ -704,16 +707,15 @@ section#contato {
     }
 
     article:nth-child(5) {
-        background-color: rgba($color: $eefaz-article-color, $alpha: .2);
+        background-color: rgba($color: $eefaz-article-color, $alpha: .0);
         // padding-inline: 0;
         // width: 100%;
 
         div {}
     }
+
+
 }
-
-
-
 
 footer {
     background-color: $primary-color;
