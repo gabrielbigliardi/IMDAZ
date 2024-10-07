@@ -435,5 +435,43 @@ section#contato .container #formulario button {
 #section-eeidaz article:nth-child(7) {
   background-color: rgba(164, 22, 35, 0.4);
 }
+/* --------------------------------------------------- */
+/* --------------------- CONTATO --------------------- */
+/* --------------------------------------------------- */
+footer {
+  background-color: #a41623;
+}
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+footer .footer a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+footer p {
+  font-size: 10px;
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: none;
+  }
+  footer .footer a {
+    padding: 0 1rem;
+    border: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

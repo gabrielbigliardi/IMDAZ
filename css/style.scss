@@ -408,7 +408,6 @@ section#escolas {
 /* -------------------------------------------------- */
 /* --------------------- EQUIPE --------------------- */
 /* -------------------------------------------------- */
-
 #equipe {
     .container {
         background-color: $primary-color;
@@ -635,4 +634,60 @@ section#contato {
         div {}
     }
 
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* --------------------- CONTATO --------------------- */
+/* --------------------------------------------------- */
+
+footer {
+    background-color: $primary-color;
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: $text-color;
+
+        }
+    }
+
+    p {
+        font-size: 10px;
+        color: $text-color;
+        opacity: .5;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; // Alinha os itens à direita
+            max-height: none; // Remove a limitação de altura em telas maiores
+
+            a {
+                padding: 0 1rem;
+                // padding: 0 $link-padding;
+                border: none; // Remove o separador nas telas maiores
+            }
+        }
+
+        // .menu-toggle {
+        //     display: none; // Esconde o ícone de menu em telas maiores
+        // }
+    }
 }
