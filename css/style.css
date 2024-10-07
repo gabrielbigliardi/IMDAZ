@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +29,11 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #a41623;
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 3000;
 }
 
 nav {
@@ -51,7 +55,7 @@ nav .menu-toggle span {
 }
 nav .menu {
   width: 100%;
-  background-color: #333;
+  background-color: #a41623;
   position: absolute;
   top: 60px;
   left: 0;
@@ -67,18 +71,18 @@ nav .menu a {
   padding: 10px 20px;
   display: block;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #a41623;
 }
 
 @media (min-width: 768px) {
   nav .menu {
     display: flex;
     position: static;
-    justify-content: flex-end;
+    justify-content: center;
     max-height: none;
   }
   nav .menu a {
-    padding: 0 10px 20px;
+    padding: 0 1rem;
     border: none;
   }
   nav .menu-toggle {
@@ -251,17 +255,25 @@ section#escolas div {
   padding: 1rem 0.8rem;
   text-align: center;
   max-width: 60vw;
-  min-height: 40vh;
+  min-height: 190px;
   cursor: pointer;
   box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 5px 4px 21px 5px rgba(0, 0, 0, 0.26);
 }
 section#escolas div img {
-  max-width: 80%;
+  text-align: center;
+  max-width: 200px;
   max-height: 100%;
   object-fit: contain;
-  text-align: center;
+}
+section#escolas div h3 {
+  margin-top: 1rem;
+  min-height: 50px;
+  overflow: hidden;
+  /* Esconde o excesso de texto, se necessário */
+  text-overflow: ellipsis;
+  /* Se desejar, corte o texto com "..." */
 }
 section#escolas div p {
   overflow: hidden;
@@ -355,9 +367,11 @@ section#contato .container #formulario label {
 }
 section#contato .container #formulario input,
 section#contato .container #formulario textarea {
+  font-size: 1.2rem;
   height: 3rem;
   border: #a41623 2px solid;
   border-radius: 0.5rem;
+  padding: 1rem;
 }
 section#contato .container #formulario textarea {
   height: 12rem;
@@ -369,6 +383,57 @@ section#contato .container #formulario button {
   background-color: #a41623;
   border: #a41623 1px solid;
   border-radius: 0.5rem;
+}
+
+#section-eeidaz {
+  text-align: center;
+}
+#section-eeidaz div:nth-child(1) {
+  padding: 4rem;
+  background-color: white;
+}
+#section-eeidaz h1 {
+  padding-bottom: 2rem;
+}
+#section-eeidaz p {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+#section-eeidaz article {
+  padding: 5vh 8vw;
+  display: flex;
+}
+#section-eeidaz article div:nth-child(1) {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(230, 230, 230);
+}
+#section-eeidaz img {
+  width: 30vw;
+  object-fit: cover;
+  height: 100%;
+}
+#section-eeidaz article:nth-child(2) {
+  background-color: rgba(164, 22, 35, 0.9);
+}
+#section-eeidaz article:nth-child(3) {
+  background-color: rgba(164, 22, 35, 0.8);
+}
+#section-eeidaz article:nth-child(4) {
+  background-color: rgba(164, 22, 35, 0.7);
+}
+#section-eeidaz article:nth-child(5) {
+  background-color: rgba(164, 22, 35, 0.6);
+}
+#section-eeidaz article:nth-child(6) {
+  background-color: rgba(164, 22, 35, 0.5);
+}
+#section-eeidaz article:nth-child(7) {
+  background-color: rgba(164, 22, 35, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */
