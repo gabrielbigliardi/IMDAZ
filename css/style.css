@@ -480,5 +480,8 @@ section#contato .container #formulario button {
 #section-eefdaz article:nth-child(5) {
   background-color: rgba(178, 224, 187, 0);
 }
+footer {
+  background-color: #a41623;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@ $primary-color: #a41623;
 $eefaz-article-color: #b2e0bb;
 //$background-color: rgb(230, 230, 230);
 $background-color: blue;
+
 * {
     margin: 0;
     padding: 0;
@@ -633,7 +634,6 @@ section#contato {
         // padding-inline: 0;
         // width: 100%;
 
-        
     }
 
 }
@@ -716,4 +716,6 @@ section#contato {
 
 }
 
-
+footer {
+    background-color: $primary-color;
+}
