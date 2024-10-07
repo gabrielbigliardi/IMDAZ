@@ -10,7 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.0",
@@ -20,5 +19,6 @@
   },
   "devDependencies": {
     "sass": "^1.79.3"
-  }
+  },
+  "description": ""
 }

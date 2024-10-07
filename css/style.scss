@@ -1,4 +1,5 @@
 $primary-color: #a41623;
+$eefaz-article-color: #b2e0bb;
 $background-color: rgb(230, 230, 230);
 
 * {
@@ -553,7 +554,7 @@ section#contato {
         background-color: white;
     }
 
-    // padding-inline: 8vw;
+    // padding-inline: 8vw;3
 
     h1 {
         padding-bottom: 2rem;
@@ -632,7 +633,87 @@ section#contato {
         // padding-inline: 0;
         // width: 100%;
 
-        div {}
+        
     }
 
 }
+
+#section-eefdaz {
+
+    text-align: center;
+
+    div:nth-child(1) {
+        padding: 4rem;
+        background-color: white;
+    }
+
+    // padding-inline: 8vw;3
+
+    h1 {
+        padding-bottom: 2rem;
+    }
+
+    p {
+        font-size: .9rem;
+        padding-bottom: 2rem;
+    }
+
+    article {
+        padding: 5vh 8vw;
+
+        display: flex;
+
+        div:nth-child(1) {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            background-color: $background-color;
+        }
+    }
+
+    img {
+        width: 30vw;
+        object-fit: cover;
+        height: 100%;
+        // height: 30vh;
+    }
+
+    article:nth-child(2) {
+        background-color: rgba($color: $eefaz-article-color, $alpha: .99);
+        // padding-inline: 0;
+        // width: 100%;
+
+        div {}
+    }
+
+    article:nth-child(3) {
+        background-color: rgba($color: $eefaz-article-color, $alpha: .66);
+        // padding-inline: 0;
+        // width: 100%;
+
+        div {}
+    }
+
+    article:nth-child(4) {
+        background-color: rgba($color: $eefaz-article-color, $alpha: .33);
+        // padding-inline: 0;
+        // width: 100%;
+
+        div {}
+    }
+
+    article:nth-child(5) {
+        background-color: rgba($color: $eefaz-article-color, $alpha: .2);
+        // padding-inline: 0;
+        // width: 100%;
+
+        div {}
+    }
+
+
+}
+
+
