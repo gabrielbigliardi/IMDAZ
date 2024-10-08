@@ -1,12 +1,11 @@
 $primary-color: #a41623;
 $eefaz-article-color: #b2e0bb;
-//$background-color: rgb(230, 230, 230);
-$background-color: blue;
+$background-color: rgb(230, 230, 230);
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
@@ -481,6 +480,55 @@ section#escolas {
             }
         }
     }
+}
+.colaboradorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 10rem;
+    margin-top: 5rem;
+    .colaboradoresHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-sizing: border-box;
+        margin-inline: 5vw;
+        p {
+            font-size: 1.2rem;
+        }
+    
+        span {
+            align-self: self-end;
+        }
+    }
+    
+    
+    
+    .cardsContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 50rem;
+    
+        img {
+            width: 12rem;
+        }
+    
+        span {
+            h3 {
+                text-align: center;
+            }
+    
+            p {
+                text-align: center;
+            }
+        }
+}
+
 }
 
 
