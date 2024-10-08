@@ -503,8 +503,9 @@ section#escolas {
             font-size: 1.2rem;
         }
 
-        span {
+        .elder {
             align-self: self-end;
+
         }
     }
 
@@ -519,22 +520,36 @@ section#escolas {
         margin: 0 auto;
         max-width: 50rem;
 
-        img {
-            width: 12rem;
-        }
 
         span {
-            h3 {
-                text-align: center;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            max-width: 10rem;
+
+            img {
+                width: 100%;
             }
 
-            p {
-                text-align: center;
+            .info {
+                padding: 1rem;
+
+                h3 {
+                    font-size: 1rem;
+                    margin-bottom: .2rem;
+                }
+
+                p {
+                    font-size: .8rem;
+                    opacity: .7;
+                    color: black;
+                }
             }
         }
     }
-
 }
+
 
 
 /* --------------------------------------------------- */
