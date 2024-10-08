@@ -8,42 +8,6 @@ function clicando(e) {
 }
 
 
-// const sanduiche = document.getElementById('sanduiche');
-// const menu = document.getElementById('menu');
-
-// sanduiche.addEventListener('click', () => {
-//     console.log('sanduiche')
-//     // menu.classList.toggle('active');
-// });
-
-
-// function openNav() {
-//     // document.getElementById("myNav").style.width = "100%";
-//     document.querySelector('.overlay-content').classList.add('menu-active');
-//     // console.log(document.querySelectorAll('.overlay-content'));
-// }
-
-// function closeNav() {
-//     document.getElementById("myNav").style.width = "0%";
-// }
-
-// function scrollNClose(e) {
-
-//     e.preventDefault();
-
-//     const targetId = e.target.getAttribute('id');
-
-//     const targetElement = document.querySelector(`section#${targetId}`);
-
-//     // if (window.screenX < 768) {
-//     //     closeNav();
-//     // }
-
-//     window.scrollTo({
-//         top: targetElement.offsetTop,
-//         behavior: "smooth"
-//     })
-// }
 
 
 
