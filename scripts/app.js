@@ -182,6 +182,11 @@ document.getElementById('formulario').addEventListener('submit', function (event
         } else {
             console.log('erro ao enviar o email')
         }
+
+        const button = document.getElementById('button-submit')
+        button.innerText = 'Enviado com sucesso ✓'
+        button.disabled = true
+
     }).catch(error => {
         console.error('Erro:', error);
         alert('Erro ao enviar o email.');
