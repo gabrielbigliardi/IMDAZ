@@ -178,6 +178,8 @@ section#projetos {
 
 img {
     vertical-align: middle;
+    object-fit: cover;
+    height: 40vh;
 }
 
 /* Slideshow container */
@@ -481,30 +483,33 @@ section#escolas {
         }
     }
 }
-.colaboradorContainer{
+
+.colaboradorContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
     gap: 10rem;
     margin-top: 5rem;
+
     .colaboradoresHeader {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         box-sizing: border-box;
         margin-inline: 5vw;
+
         p {
             font-size: 1.2rem;
         }
-    
+
         span {
             align-self: self-end;
         }
     }
-    
-    
-    
+
+
+
     .cardsContainer {
         display: flex;
         flex-direction: row;
@@ -513,21 +518,21 @@ section#escolas {
         justify-content: center;
         margin: 0 auto;
         max-width: 50rem;
-    
+
         img {
             width: 12rem;
         }
-    
+
         span {
             h3 {
                 text-align: center;
             }
-    
+
             p {
                 text-align: center;
             }
         }
-}
+    }
 
 }
 
